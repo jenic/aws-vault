@@ -41,6 +41,7 @@ func YkmanMfaProvider(mfaSerial string) (string, error) {
 	if err != nil {
 		return "", fmt.Errorf("ykman: %w", err)
 	}
+    fmt.Fprintln(os.Stderr, "OK.")
 
 	return strings.TrimSpace(string(out)), nil
 }
